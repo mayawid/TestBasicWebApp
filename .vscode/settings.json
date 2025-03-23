@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/44beea6f-e063-423f-8ab4-5e9ce3d4009d/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/CubingWebApp2",
+    "appService.deploySubpath": "."
+}
