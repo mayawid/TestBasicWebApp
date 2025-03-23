@@ -21,7 +21,7 @@ const db = mysql.createConnection({
     host: 'cubingdb2.mysql.database.azure.com', // Replace with your DB host, e.g., '127.0.0.1' or a remote server
     user: 'mysqladmin',      // Replace with your DB username
     password: 'Monzie1316!', // Replace with your DB password
-    database: 'testdb' // Replace with your DB name
+    database: 'testdb', // Replace with your DB name
     ssl: {
         ca: '/path/to/DigiCertGlobalRootCA.crt.pem'
     }
