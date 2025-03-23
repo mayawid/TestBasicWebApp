@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "http://cubingwebapp2.azurewebsites.net",
+            "request": "launch",
+            "url": "http://cubingwebapp2.azurewebsites.net"
+        }
+    ]
+}
