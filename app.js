@@ -50,7 +50,7 @@ app.get('/db-test', (req, res) => {
 });
 
 // Define the Hello World route
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Hello World with My SQL Local DB V1!');
 });
 
@@ -58,4 +58,4 @@ const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
-*/
+
