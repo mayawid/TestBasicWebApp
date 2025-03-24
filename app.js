@@ -43,19 +43,36 @@ db.connect((err) => {
     console.log('Connected to the database.');
 });
 
+console.log('Before Trying DB query');
 // Define a test route to query the database
 app.get('/db-test', (req, res) => {
+    console.log('Trying DB query');
     const query = 'SELECT * FROM testdb.permtime';
     db.query(query, (err, results) => {
         if (err) {
             console.error('Error executing query:', err);
             res.status(500).send('Database query failed.');
         } else {
-            res.send(`Database connection successful! First Row: ${results[0]}`);
+            console.log('Print row by row');
+            res.send(`Print row by row`);
+            results.forEach((row, index) => {
+                console.log('Iterate row by row');
+                console.log(`Row ${index + 1}:`, row);
+                res.send(`Row: ${row}`);
+            });
+        }
+    });
+    db.end((err) => {
+        if (err) {
+            console.error('Error closing the database connection:', err);
+        } else {
+            console.log('Database connection closed.');
         }
     });
 });
 
+
+console.log('Before Hellow World');
 // Define the Hello World route
 app.get('/', (req, res) => {
     res.send('Hello World with My SQL Local DB V1!');
