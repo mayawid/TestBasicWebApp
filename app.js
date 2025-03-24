@@ -10,11 +10,16 @@
 //    console.log(`Server is running on http://localhost:${PORT}`);
 //});
 
-
 const express = require('express');
 const mysql = require('mysql2');
-
 const app = express();
+/*
+var fs = require('fs');
+const path = require("path");
+
+
+const CUBINGAPP = process.env.PWD;
+*/
 
 // Set up database connection
 const db = mysql.createConnection({
@@ -23,9 +28,9 @@ const db = mysql.createConnection({
     user: 'mysqladmin',      // Replace with your DB username
     password: 'Monzie1316!', // Replace with your DB password
     database: 'testdb', // Replace with your DB name
-    ssl: {
-        ca: '/path/to/DigiCertGlobalRootCA.crt.pem'
-    }
+    //ssl: {
+    //    ca: '/path/to/DigiCertGlobalRootCA.crt'
+    //}
 });
 
 
