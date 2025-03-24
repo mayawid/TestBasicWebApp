@@ -54,12 +54,14 @@ app.get('/db-test', (req, res) => {
             res.status(500).send('Database query failed.');
         } else {
             console.log('Print row by row');
-            res.send(`Print row by row`);
+            var allRow = "Print ";
             results.forEach((row, index) => {
                 console.log('Iterate row by row');
                 console.log(`Row ${index + 1}:`, row);
-                res.send(`Row: ${row}`);
+                let allRow = allRow + row;
+                
             });
+            res.send(`Row: ${allRow}`);
         }
     });
     db.end((err) => {
